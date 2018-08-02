@@ -1,18 +1,21 @@
 package stack;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
 import java.util.NoSuchElementException;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-class ArrayStackTest {
+public class ArrayStackTest1 {
+
 	Stack stack=new ArrayStack(5);
 	@Test
-	void isEmptyTest() {
+	public void isEmptyTest() {
 		assertEquals(true,stack.isEmpty());
 	}
 	
+	
+
 	@Test 
 	public void pushTest() {
 		stack.push(3);
@@ -42,5 +45,6 @@ class ArrayStackTest {
 			
 		}
 	}
+
 
 }

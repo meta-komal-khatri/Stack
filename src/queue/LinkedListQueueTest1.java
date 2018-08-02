@@ -1,13 +1,14 @@
 package queue;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-class LinkeListQueueTest {
+public class LinkedListQueueTest1 {
+
 	LinkedListQueue linkedListQueue=new LinkedListQueue();
 	@Test
-	void queueUnderflowTest() {
+	public void queueUnderflowTest() {
 		assertEquals(true,linkedListQueue.isEmpty());
 		assertNotEquals(false,linkedListQueue.isEmpty());
 	}
@@ -36,4 +37,5 @@ class LinkeListQueueTest {
 			
 		
 	}
+
 }

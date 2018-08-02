@@ -1,13 +1,14 @@
 package queue;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-class ArrayQueueTest {
+public class ArrayQueueTest1Test {
+
 	ArrayQueue arrayQueue=new  ArrayQueue(5);
 	@Test
-	void queueUnderflowTest() {
+	public void queueUnderflowTest() {
 		//queue is empty
 		assertEquals(true,arrayQueue.isEmpty());
 		assertNotEquals(false,arrayQueue.isEmpty());
@@ -44,5 +45,4 @@ class ArrayQueueTest {
 		
 		
 	}
-
 }

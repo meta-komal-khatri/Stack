@@ -1,16 +1,17 @@
 package stack;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
 import java.util.NoSuchElementException;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-class LinkedListStackTest {
+public class LinkedListStacktest1 {
+
 
 	Stack stack=new LinkedListStack();
 	@Test
-	void isEmptyTest() {
+	public void isEmptyTest() {
 		assertEquals(true,stack.isEmpty());
 	}
 	@Test
@@ -30,5 +31,4 @@ class LinkedListStackTest {
 		assertEquals(true,stack.isEmpty());
 		
 	}
-
 }
