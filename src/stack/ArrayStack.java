@@ -1,36 +1,51 @@
 package stack;
 
 import java.util.NoSuchElementException;
-
-public class ArrayStack {
-	private int[] data;
+/**
+ * implements stack structure using array
+ */
+public class ArrayStack implements Stack{
+	static public int[] arrayStack;
 	private int top,size;
-	public ArrayStack(int n){
-		size=n;
-		data=new int[size];
+	public ArrayStack(int size){
+		this.size=size;
+		arrayStack=new int[size];
 		top=-1;
 	}
-	public void push(int x){
+	/**
+	 * add elements at the top of array
+	 * @param value added to the stack
+	 */
+	public void push(int valueOfStack){
 		if(top+1>=size){
 			throw new IndexOutOfBoundsException("Overflow Exception");
 		}
 		else{
-			data[++top]=x;
+			arrayStack[++top]=valueOfStack;
 		}
 		
 	}
+	/**
+	 * delete elements at the top of array
+	 * @return deleted element
+	 */
 	public int pop(){
-		int p; 
+		int poppedElement; 
 		if(top==-1){
 			throw new NoSuchElementException("Underflow Exception");	
 		}
 		else{
-			p=data[top--];
+			poppedElement=arrayStack[top--];
 		}
-		return p;
+		return poppedElement;
 				
 	}
+	/**
+	 * checks that stack array is empty or not
+	 * @return true is stack array is empty 
+	 */
 	public boolean isEmpty(){
 		return top==-1;
 	}
+
 }

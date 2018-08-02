@@ -1,14 +1,20 @@
 package stack;
 
 import java.util.NoSuchElementException;
-
-public class LinkedListStack {
+/**
+ * implements stack using linked list representation
+ */
+public class LinkedListStack implements Stack {
 	protected Node top;
 	public LinkedListStack(){
 		top=null;
 	}
-	public void push(int x){
-		Node newNode=new Node(x,null);
+	/**
+	 * add elements at the top of linked list
+	 * @param value added to the stack
+	 */
+	public void push(int valueOfStack){
+		Node newNode=new Node(valueOfStack,null);
 		if(top==null){
 			top=newNode;
 		}
@@ -17,20 +23,29 @@ public class LinkedListStack {
 			top=newNode;
 		}
 	}
+	/**
+	 * delete elements at the top of linked list
+	 * @return deleted element
+	 */
 	public int pop(){
-		Node ptr;
-		int x;
+		Node pointer;
+		int element;
 		if(top==null){
 			throw new NoSuchElementException("Underflow Exception");
 		}
 		else{
-			ptr=top;
-			top=ptr.getLink();
-			x=ptr.getData();
+			pointer=top;
+			top=pointer.getLink();
+			element=pointer.getData();
 		}
-		return x;
+		return element;
 	}
+	/**
+	 * checks that linked list stack is empty or not
+	 * @return true if  stack linked list is empty 
+	 */
 	public boolean isEmpty(){
 		return top==null;
 	}
+	
 }
